@@ -16,6 +16,7 @@ component {
 
     function onApplicationStart(){
        application.beanFactory = new ioc(folders=["/test1/service", "/test1/dao"]);
+        restInitApplication(expandPath("/test1/restapi"), "api");
     }
     
 
