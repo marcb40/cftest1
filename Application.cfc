@@ -15,10 +15,7 @@ component {
 	 
 
     function onApplicationStart(){
-       application.beanFactory = new ioc(folders=expandPath("/test1/service"));
-       application.beanFactory.declareBean("ClientService", "test1.service.ClientService");
-       application.beanFactory.declareBean("ClientDao", "test1.dao.ClientDao");
-     
+       application.beanFactory = new ioc(folders=["/test1/service", "/test1/dao"]);
     }
     
 
